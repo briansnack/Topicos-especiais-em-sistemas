@@ -1,0 +1,14 @@
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\bin\Debug\net8.0\Ex06A.exe
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\bin\Debug\net8.0\Ex06A.deps.json
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\bin\Debug\net8.0\Ex06A.runtimeconfig.json
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\bin\Debug\net8.0\Ex06A.dll
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\bin\Debug\net8.0\Ex06A.pdb
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.AssemblyInfoInputs.cache
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.AssemblyInfo.cs
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.csproj.CoreCompileInputs.cache
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.dll
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\refint\Ex06A.dll
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.pdb
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\Ex06A.genruntimeconfig.cache
+C:\Users\Brian\Desktop\C#\ListaExercicio\Ex06A\obj\Debug\net8.0\ref\Ex06A.dll
