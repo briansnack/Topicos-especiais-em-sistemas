@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snack\\Desktop\\C#\\API\\API\\API.csproj": {}
+    "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snack\\Desktop\\C#\\API\\API\\API.csproj": {
+    "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snack\\Desktop\\C#\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\snack\\Desktop\\C#\\API\\API\\API.csproj",
+        "projectPath": "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
         "packagesPath": "C:\\Users\\snack\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snack\\Desktop\\C#\\API\\API\\obj\\",
+        "outputPath": "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\snack\\AppData\\Roaming\\NuGet\\NuGet.Config"
