@@ -34,10 +34,10 @@ app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome) => {
             if (produtos[i].Nome == nome)
             {
                 // retornar o produto encotrado
-                return produtos[i];
+                return Results.Ok(produtos[i]);
             }
         }
-        return null;
+        return Results.NotFound();
     }
 );
 
