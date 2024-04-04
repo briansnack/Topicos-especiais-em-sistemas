@@ -59,5 +59,4 @@ app.MapPost("/produto/cadastrar/{nome}/{descricao}/{valor}", ([FromRoute] string
 );
 
 app.Run();
-
 // record Produto(string nome, string descricao);         
