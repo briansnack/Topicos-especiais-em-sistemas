@@ -8,4 +8,4 @@ GET http://localhost:5143/produto/listar
 GET http://localhost:5143/produto/buscar/Celular
 
 ### Cadastro de produtos
-POST http://localhost:5143/produto/cadastrar
+POST http://localhost:5143/produto/cadastrar/arroz/alimento/10
