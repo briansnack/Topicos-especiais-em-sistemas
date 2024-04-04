@@ -8,4 +8,11 @@ GET http://localhost:5143/produto/listar
 GET http://localhost:5143/produto/buscar/Celular
 
 ### Cadastro de produtos
-POST http://localhost:5143/produto/cadastrar/arroz/alimento/10
+POST http://localhost:5143/produto/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Arroz",
+    "descricao" : "Alimento",
+    "valor" : 15
+}
