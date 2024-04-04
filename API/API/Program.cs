@@ -58,5 +58,25 @@ app.MapPost("/produto/cadastrar", ([FromBody] Produto produto) => {
     }
 );
 
+// PUT: http://localhost:5143/produto/alterar
+app.MapPut("/produto/alterar{id}", ([FromRoute] string id, [FromBody] Produto produtoAlterado) => {
+
+    Produto? produto = produtos.FirstOrDefault(x => x.Id == id);
+    if(produto is null){
+        return Results.NotFound("Produto não encontrado!");
+    }
+    produto.Nome = produtoAlterado.Nome;
+    produto.Descricao = produtoAlterado.Descricao;
+    produto.Valor = produtoAlterado.Valor;
+    return Results.Ok("Produto alterado!");
+    }
+);
+
+// POST: http://localhost:5143/produto/deletar
+app.MapPost("/produto/deletar/{id}", ([FromRoute] string id, [FromBody] Produto produtoAlterado) => {
+
+
+    }
+);
 app.Run();
 // record Produto(string nome, string descricao);         

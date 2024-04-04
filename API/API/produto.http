@@ -16,3 +16,23 @@ Content-Type: application/json
     "descricao" : "Alimento",
     "valor" : 15
 }
+
+### Alteração de produtos
+PUT http://localhost:5143/produto/alterar
+Content-Type: application/json
+
+{
+    "nome" : "Batata",
+    "descricao" : "Alimento",
+    "valor" : 8
+}
+
+### Remoção de produtos
+POST http://localhost:5143/produto/deletar
+Content-Type: application/json
+
+{
+    "nome" : "Arroz",
+    "descricao" : "Alimento",
+    "valor" : 15
+}
