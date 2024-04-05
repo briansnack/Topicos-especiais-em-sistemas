@@ -73,9 +73,16 @@ app.MapPut("/produto/alterar{id}", ([FromRoute] string id, [FromBody] Produto pr
 );
 
 // POST: http://localhost:5143/produto/deletar
-app.MapPost("/produto/deletar/{id}", ([FromRoute] string id, [FromBody] Produto produtoAlterado) => {
+app.MapDelete("/produto/deletar/{id}", ([FromRoute] string id, [FromBody] Produto produtoDeletado) => {
 
-
+    Produto? produto = produtos.FirstOrDefault(x => x.Id == id);
+    if(produto is null){
+        return Results.NotFound("Produto não encontrado!");
+    }
+    produto.Nome = produtoDeletado.Nome;
+    produto.Descricao = produtoDeletado.Descricao;
+    produto.Valor = produtoDeletado.Valor;
+    return Results.Ok("Produto deletado!");
     }
 );
 app.Run();

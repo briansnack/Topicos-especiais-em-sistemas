@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Alteração de produtos
-PUT http://localhost:5143/produto/alterar
+POST http://localhost:5143/produto/alterar
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### Remoção de produtos
-POST http://localhost:5143/produto/deletar
+DELETE http://localhost:5143/produto/deletar
 Content-Type: application/json
 
 {
