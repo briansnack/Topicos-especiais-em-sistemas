@@ -17,18 +17,8 @@ Content-Type: application/json
     "valor" : 15
 }
 
-### Alteração de produtos
-POST http://localhost:5143/produto/alterar
-Content-Type: application/json
-
-{
-    "nome" : "Batata",
-    "descricao" : "Alimento",
-    "valor" : 8
-}
-
 ### Remoção de produtos
-DELETE http://localhost:5143/produto/deletar
+DELETE http://localhost:5143/produto/deletar/bdebe344-e7dc-4cc4-b62f-291d444a207b
 Content-Type: application/json
 
 {
@@ -36,3 +26,14 @@ Content-Type: application/json
     "descricao" : "Alimento",
     "valor" : 15
 }
+
+### Alterar produto
+PUT http://localhost:5143/produto/alterar/997adaae-736f-4423-a66c-0053cdeb7644
+Content-Type: application/json
+
+{
+    "nome" : "Arroz Alterado",
+    "descricao" : "Alimento",
+    "valor" : 15
+}
+
