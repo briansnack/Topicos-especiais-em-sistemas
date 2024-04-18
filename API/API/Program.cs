@@ -5,6 +5,9 @@ using API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
+// Registrar o serviço de banco de dados
+builder.Services.AddDbContext<AppDataContext>();
+
 var app = builder.Build();
 
 Produto produto = new Produto();
@@ -42,18 +45,11 @@ app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome) => {
 );
 
 // POST: http://localhost:5143/produto/cadastrar
-app.MapPost("/produto/cadastrar", ([FromBody] Produto produto) => {
-    // // Preencher o objeto pelo construtor
-    // Produto produto = new(nome, descricao, valor);
+app.MapPost("/produto/cadastrar", ([FromBody] Produto produto, [FromServices] AppDataContext ctx) => {
 
-    // // Preencher o objeto pelos atributos
-    // // Produto produto = new Produto(nome, descricao, valor);
-    // // produto.Nome = nome;
-    // // produto.Descricao = descricao;
-    // // produto.Valor = valor;
-
-    // Adicionar o objeto dentro da lista
-    produtos.Add(produto);
+    // Adicionar o objeto dentro da tabela no banco de dados
+    ctx.Produtos.Add(produto);
+    ctx.SaveChanges();
     return Results.Created("", produto);
     }
 );
