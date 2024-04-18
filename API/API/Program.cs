@@ -28,7 +28,12 @@ List<Produto> produtos =
 app.MapGet("/", () => "API de Produtos");
 
 // GET: http://localhost:5143/produto/listar
-app.MapGet("/produto/listar", () => produtos);
+app.MapGet("/produto/listar", ([FromServices] AppDataContext ctx) => {
+    if(ctx.Produtos.Any()){
+        return Results.Ok(ctx.Produtos.ToList());
+    } 
+    return Results.NotFound("Não existem produtos na tabela");
+});
 
 // GET: http://localhost:5143/produto/buscar/nomedoproduto
 app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome) => {
@@ -49,7 +54,7 @@ app.MapPost("/produto/cadastrar", ([FromBody] Produto produto, [FromServices] Ap
 
     // Adicionar o objeto dentro da tabela no banco de dados
     ctx.Produtos.Add(produto);
-    ctx.SaveChanges();
+    ctx.SaveChanges(); // qnd grava, altera e remove tem que colocar o SaveChanges
     return Results.Created("", produto);
     }
 );
