@@ -5,7 +5,7 @@ GET http://localhost:5143/
 GET http://localhost:5143/produto/listar
 
 ### Busca de produtos por nome
-GET http://localhost:5143/produto/buscar/Celular
+GET http://localhost:5143/produto/buscar/Arroz
 
 ### Cadastro de produtos
 POST http://localhost:5143/produto/cadastrar
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Remoção de produtos
-DELETE http://localhost:5143/produto/deletar/bdebe344-e7dc-4cc4-b62f-291d444a207b
+DELETE http://localhost:5143/produto/deletar/12eaf39e-0670-415f-bdc9-99862827db37
 Content-Type: application/json
 
 {

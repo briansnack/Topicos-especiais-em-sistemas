@@ -1,6 +1,6 @@
 // using System.Collections.Generic;
 // using Microsoft.AspNetCore.Builder;
-
+using Microsoft.EntityFrameworkCore;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,15 +36,13 @@ app.MapGet("/produto/listar", ([FromServices] AppDataContext ctx) => {
 });
 
 // GET: http://localhost:5143/produto/buscar/nomedoproduto
-app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome) => {
-    for (int i = 0; i < produtos.Count; i++)
-        {
-            if (produtos[i].Nome == nome)
-            {
-                // retornar o produto encotrado
-                return Results.Ok(produtos[i]);
-            }
+app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome, [FromServices] AppDataContext ctx) => {
+        ctx.Produtos.FirstOrDefaultAsync(produto => produto.Nome == nome);
+        
+        if(produto != null){
+            return Results.Ok(produto);
         }
+
         return Results.NotFound();
     }
 );
@@ -60,13 +58,15 @@ app.MapPost("/produto/cadastrar", ([FromBody] Produto produto, [FromServices] Ap
 );
 
 // POST: http://localhost:5143/produto/deletar
-app.MapDelete("/produto/deletar/{id}", ([FromRoute] string id, [FromBody] Produto produtoDeletado) => {
+app.MapDelete("/produto/deletar/{id}", async (string id, [FromServices] AppDataContext ctx) => {
+    await ctx.Produtos.FindAsync(id);
 
-    Produto? produto = produtos.FirstOrDefault(x => x.Id == id);
-    if(produto is null){
+    if(produto == null){
         return Results.NotFound("Produto não encontrado!");
     }
-    produtos.Remove(produto);
+    ctx.Produtos.Remove(produto);
+    await ctx.SaveChangesAsync();
+
     return Results.Ok("Produto deletado!");
     }
 );
