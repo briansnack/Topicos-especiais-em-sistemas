@@ -35,15 +35,21 @@ app.MapGet("/produto/listar", ([FromServices] AppDataContext ctx) => {
     return Results.NotFound("Não existem produtos na tabela");
 });
 
-// GET: http://localhost:5143/produto/buscar/nomedoproduto
-app.MapGet("/produto/buscar/{nome}", ([FromRoute] string nome, [FromServices] AppDataContext ctx) => {
-        ctx.Produtos.FirstOrDefaultAsync(produto => produto.Nome == nome);
+// GET: http://localhost:5143/produto/buscar/idproduto
+app.MapGet("/produto/buscar/{id}", ([FromRoute] string id, [FromServices] AppDataContext ctx) => {
+        // BUSCA PELO NOME
+        // ctx.Produtos.FirstOrDefaultAsync(produto => produto.Nome == nome);
         
-        if(produto != null){
-            return Results.Ok(produto);
-        }
+        // if(produto != null){
+        //     return Results.Ok(produto);
+        // }
 
-        return Results.NotFound();
+        // BUSCA PELO ID
+        Produto? produto = ctx.Produtos.Find(id);
+        if(produto is null){
+            return Results.NotFound("Produto não encontrado!");
+        }
+        return Results.Ok(produto);
     }
 );
 
@@ -57,30 +63,31 @@ app.MapPost("/produto/cadastrar", ([FromBody] Produto produto, [FromServices] Ap
     }
 );
 
-// POST: http://localhost:5143/produto/deletar
-app.MapDelete("/produto/deletar/{id}", async (string id, [FromServices] AppDataContext ctx) => {
-    await ctx.Produtos.FindAsync(id);
-
-    if(produto == null){
+// POST: http://localhost:5143/produto/deletar/id
+app.MapDelete("/produto/deletar/{id}", (string id, [FromServices] AppDataContext ctx) => {
+    
+    Produto? produto = ctx.Produtos.FirstOrDefault(x => x.Id == id);
+    if (produto is null){
         return Results.NotFound("Produto não encontrado!");
     }
     ctx.Produtos.Remove(produto);
-    await ctx.SaveChangesAsync();
-
+    ctx.SaveChanges();
     return Results.Ok("Produto deletado!");
     }
 );
 
 // PUT: http://localhost:5143/produto/alterar
-app.MapPut("/produto/alterar/{id}", ([FromRoute] string id, [FromBody] Produto produtoAlterado) => {
+app.MapPut("/produto/alterar/{id}", ([FromRoute] string id, [FromBody] Produto produtoAlterado,[FromServices] AppDataContext ctx) => {
 
-    Produto? produto = produtos.FirstOrDefault(x => x.Id == id);
+    Produto? produto = ctx.Produtos.Find(id);
     if(produto is null){
         return Results.NotFound("Produto não encontrado!");
     }
     produto.Nome = produtoAlterado.Nome;
     produto.Descricao = produtoAlterado.Descricao;
     produto.Valor = produtoAlterado.Valor;
+    ctx.Produtos.Update(produto);
+    ctx.SaveChanges();
     return Results.Ok("Produto alterado!");
     }
 );

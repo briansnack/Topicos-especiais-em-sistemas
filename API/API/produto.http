@@ -5,7 +5,7 @@ GET http://localhost:5143/
 GET http://localhost:5143/produto/listar
 
 ### Busca de produtos por nome
-GET http://localhost:5143/produto/buscar/Arroz
+GET http://localhost:5143/produto/buscar/5720e9ad-f079-49d3-a6eb-008175c546ba
 
 ### Cadastro de produtos
 POST http://localhost:5143/produto/cadastrar
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Remoção de produtos
-DELETE http://localhost:5143/produto/deletar/12eaf39e-0670-415f-bdc9-99862827db37
+DELETE http://localhost:5143/produto/deletar/fe83f436-23cd-4237-b8eb-9d115379254d
 Content-Type: application/json
 
 {
@@ -28,12 +28,12 @@ Content-Type: application/json
 }
 
 ### Alterar produto
-PUT http://localhost:5143/produto/alterar/997adaae-736f-4423-a66c-0053cdeb7644
+PUT http://localhost:5143/produto/alterar/8783d716-809b-465e-b0c4-f5535e82f5e6
 Content-Type: application/json
 
 {
     "nome" : "Arroz Alterado",
     "descricao" : "Alimento",
-    "valor" : 15
+    "valor" : 8.56
 }
 
