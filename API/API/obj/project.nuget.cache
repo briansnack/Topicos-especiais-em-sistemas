@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GXAHQMV/7moayAuAxjZesvgsgkhtjQ9rcStI32wHLHvfDxwHE9/BJbw7LccWVOD9FxHKmdkmXscLBrkfEflbeA==",
+  "dgSpecHash": "34bcMerlsf+Omfjz3vYwdxmd2MlMuDCLahP0wk/G4+keJtDa7d6Ji2ew+I42CGo+NueGxLwtt1YAXM+boFNyKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\snack\\Documents\\GitHub\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\snack\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\snack\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

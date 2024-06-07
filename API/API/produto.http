@@ -12,7 +12,7 @@ POST http://localhost:5143/produto/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "Arroz",
+    "nome" : "Arroz soltinho",
     "descricao" : "Alimento",
     "valor" : 15
 }
