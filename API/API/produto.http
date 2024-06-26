@@ -5,7 +5,7 @@ GET http://localhost:5143/
 GET http://localhost:5143/produto/listar
 
 ### Busca de produtos por nome
-GET http://localhost:5143/produto/buscar/9b76d0e9-a7ec-44f4-bfc4-75d9e32665b9
+GET http://localhost:5143/produto/buscar/fe908757-2571-49c2-9146-66a87e334c60
 
 ### Cadastro de produtos
 POST http://localhost:5143/produto/cadastrar
@@ -18,22 +18,16 @@ Content-Type: application/json
 }
 
 ### Remoção de produtos
-DELETE http://localhost:5143/produto/deletar/8a6b0ab4-787f-44e0-86ae-d037ca5b74b0
+DELETE http://localhost:5143/produto/deletar/3cf4465d-b1ae-4826-83ce-ed278b3d2f04
 Content-Type: application/json
-
-{
-    "nome" : "Arroz",
-    "descricao" : "Alimento",
-    "valor" : 15
-}
 
 ### Alterar produto
-PUT http://localhost:5143/produto/alterar/8783d716-809b-465e-b0c4-f5535e82f5e6
+PUT http://localhost:5143/produto/alterar/73d766d2-3c7a-4a57-8c58-34c5a5dea5bd
 Content-Type: application/json
 
 {
-    "nome" : "Arroz Alterado",
-    "descricao" : "Alimento",
-    "valor" : 8.56
+    "nome" : "Batata",
+    "descricao" : "Comida",
+    "valor" : 12
 }
 

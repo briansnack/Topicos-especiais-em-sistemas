@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {}
+    "C:\\Users\\Brian\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {
+    "C:\\Users\\Brian\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Brian\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\snack\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\snack\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\obj\\",
+        "projectPath": "C:\\Users\\Brian\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Brian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Brian\\Desktop\\topicos-especiais-em-sistemas\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\snack\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Brian\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
